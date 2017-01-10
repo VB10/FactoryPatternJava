@@ -1,17 +1,21 @@
+//oluşturduğunuz java dosyasının ismi gelecek buraya
 package designpattern1;
+
 public class FactoryPattern {
     
+    //bir kalıp oluşturuyoruz ve diğer sınıflar bu kalıpta oluşacak diyoruz
     public  interface Shape {
         void draw();
     }
     
+    //Olşuturduğumuz kalıptan çağırıyoruz ve içini buna göre dolduruyoruz
     public class Rectangle implements Shape {
-        //Shape int kullnarak metodumuzu dolduruyoruz
         @Override
         public void draw() {
             System.out.println("Rectangle Method");
         }    
     }
+   
     public class Square implements Shape {
 
         @Override
@@ -28,6 +32,8 @@ public class FactoryPattern {
         }       
     }
     
+    //Ana sınıfımız ile Dizayn sınıfmız arasındaki köprü
+    //Gelen veriye göre işlem yapıp geri döndürüyor.
     public class ShapeFactory extends FactoryPattern{   
         //get metodumuzun tipi shape turunden olacak
         
