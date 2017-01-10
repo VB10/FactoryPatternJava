@@ -1,10 +1,14 @@
+//burasi açtığınız java dosyasına göre değişecek
 package designpattern1;
 public class FactoryPattern {
     
+    //bir kalıp oluşturuyoruz ve diyoruzki bundan türüyen herkesin draw adında 
+    //bir metodu olsun
     public  interface Shape {
         void draw();
     }
     
+    //Alttaki 3 class Shape'den kalıtım alarak draw metodlarının içini dolduruyoruz
     public class Rectangle implements Shape {
         //Shape int kullnarak metodumuzu dolduruyoruz
         @Override
@@ -28,6 +32,8 @@ public class FactoryPattern {
         }       
     }
     
+    //olayın gerçekleştiği ortayı bulan sınıfmız ana sınıftan gelen isteği alıp yorumlayıp
+    //ona göre döndürme işlemi yapıyor
     public class ShapeFactory extends FactoryPattern{   
         //get metodumuzun tipi shape turunden olacak
         
